@@ -1,4 +1,4 @@
-module FSM (clk, reset, a, b, c, y);
+module fsmLight (clk, reset, a, b, c, y);
 
    input logic  clk;
    input logic  reset;
@@ -8,7 +8,7 @@ module FSM (clk, reset, a, b, c, y);
    
    output logic y;
 
-   typedef enum 	logic [1:0] {S0, S1, S2, S3, S4, S5, S6, S7, S8, S9} statetype;
+   typedef enum 	logic [3:0] {S0, S1, S2, S3, S4, S5, S6, S7, S8, S9} statetype;
    statetype state, nextstate;
    
    // state register
