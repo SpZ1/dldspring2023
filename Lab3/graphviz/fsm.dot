@@ -2,14 +2,31 @@ digraph finite_state_machine {
     rankdir=LR;
     size="8,5"
     
-    node [shape = circle, label="S0\ny=0", fontsize=12] S0;
-    node [shape = circle, label="S1\ny=0", fontsize=12] S1;
-    node [shape = circle, label="S2\ny=1", fontsize=12] S2;
+    node [shape = circle, label="S0\ny=0000", fontsize=12] S0;
+    node [shape = circle, label="S1\ny=0001", fontsize=12] S1;
+    node [shape = circle, label="S2\ny=0010", fontsize=12] S2;
+    node [shape = circle, label="S3\ny=0011", fontsize=12] S3;
+    node [shape = circle, label="S4\ny=0100", fontsize=12] S4;
+    node [shape = circle, label="S5\ny=0101", fontsize=12] S5;
+    node [shape = circle, label="S6\ny=0110", fontsize=12] S6;
+    node [shape = circle, label="S7\ny=0111", fontsize=12] S7;
+    node [shape = circle, label="S8\ny=1000", fontsize=12] S8;
+    node [shape = circle, label="S9\ny=1001", fontsize=12] S9;
 
-    S0  -> S0 [ label = "a" ];
+    S0  -> S0 [ label = "reset" ];
+    
     S0  -> S1 [ label = "a'" ];
-    S1 -> S2  [ label = "a" ];
-    S1 -> S1 [ label = "a'" ];
-    S2 -> S2 [ label = "a" ];
-    S2 -> S0 [ label = "a'" ];
+    S1 -> S2 ;
+    S2 -> S3 ;
+    S3 -> S0 ;
+    
+    S0 -> S4 [ label = "b" ];
+    S4 -> S5 ;
+    S5 -> S6 ;
+    S6 -> S0 ;
+
+    S0 -> S7 [ label = "c" ];
+    S7 -> S8 ;
+    S8 -> S9 ;
+    S9 -> S0 ;
 }
