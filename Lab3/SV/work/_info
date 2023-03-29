@@ -9,12 +9,12 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/granada/Downloads/lab 3/dldspring2023/Lab3/SV
+Z0 dC:/Users/granada/Downloads/dldspring2023/Lab3/SV
 T_opt
-!s110 1679525135
-VP3FFIA0CmQddGzN05Al4;3
+!s110 1680123142
+VLWU`URHAIXjb2jJ>=ZkfA2
 04 8 4 work stimulus fast 0
-=1-00be43900f6f-641b850f-9b-178fc
+=1-00be43905a36-6424a506-13-1248
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
@@ -22,23 +22,23 @@ n@_opt
 OL;O;2021.3;73
 vfsmLight
 Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 !s110 1679525134
+Z3 !s110 1680123141
 !i10b 1
-!s100 `AWHmUDC6GLR>M_4aBQJl0
-IDe3b]K]V^F4:PN1SMgk^W3
+!s100 :DQOoz?_7MW<chRG>zE;d1
+I4ThocXTYZ3B1N4Z=ff1B92
 S1
 R0
-w1679524594
+w1680123048
 8fsmLight.sv
 FfsmLight.sv
 !i122 0
-L0 1 80
+L0 1 81
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 Z5 OL;L;2021.3;73
 r1
 !s85 0
 31
-Z6 !s108 1679525134.000000
+Z6 !s108 1680123141.000000
 Z7 !s107 fsm_tb.sv|fsmLight.sv|
 Z8 !s90 -reportprogress|300|fsmLight.sv|fsm_tb.sv|
 !i113 0
@@ -53,7 +53,7 @@ R3
 I39R1?_6TTWI_f?4elfEkB3
 S1
 R0
-w1679525129
+w1680121700
 8fsm_tb.sv
 Ffsm_tb.sv
 !i122 0

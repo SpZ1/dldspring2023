@@ -44,8 +44,57 @@ module top_demo
   logic [16:0] NEXT_COUNT;
   logic        smol_clk;
   
-  // Place TicTacToe instantiation here
-  
+  // Place FSM instantiation here
+  logic clk_en;
+  logic [3:0] state;
+  clk_div slow (sysclk_125mhz,btn[3],clk_en);
+  fsmLight dut (clk_en, btn[3], btn[0], btn[1], btn[2], state);
+  always_comb
+     case (state)
+     
+       4'd0: begin
+            led[6:1] <= 6'b000000;
+       end
+
+       4'd1: begin
+            led[6:1] <= 6'b001000;
+       end
+
+       4'd2: begin
+            led[6:1] <= 6'b011000;
+       end
+
+       4'd3: begin
+            led[6:1] <= 6'b111000;
+       end
+
+       4'd4: begin
+            led[6:1] <= 6'b000100;
+       end
+
+       4'd5: begin
+            led[6:1] <= 6'b000110;
+       end
+
+       4'd6: begin
+            led[6:1] <= 6'b000111;
+       end
+
+       4'd7: begin
+            led[6:1] <= 6'b001100;
+       end
+
+       4'd8: begin
+            led[6:1] <= 6'b011110;
+       end
+
+       4'd9: begin
+            led[6:1] <= 6'b111111;
+       end
+       default: begin
+            led[6:1] <= 6'b000000;
+       end
+     endcase
   // 7-segment display
   segment_driver driver(
   .clk(smol_clk),

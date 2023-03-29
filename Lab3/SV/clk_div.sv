@@ -1,6 +1,6 @@
 module clk_div (input logic clk, input logic rst, output logic clk_en);
 
-   logic [23:0] clk_count;
+   logic [24:0] clk_count;
 
    always_ff @(posedge clk) begin
       if (rst)
@@ -9,6 +9,6 @@ module clk_div (input logic clk, input logic rst, output logic clk_en);
 	clk_count <= clk_count + 1;
    end   
    
-   assign clk_en = clk_count[23];
+   assign clk_en = clk_count[24];
    
 endmodule // clk_div

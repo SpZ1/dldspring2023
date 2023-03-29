@@ -13,23 +13,25 @@
 # //
 # do fsm.do
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 17:45:34 on Mar 22,2023
+# Start time: 15:52:21 on Mar 29,2023
 # vlog -reportprogress 300 fsmLight.sv fsm_tb.sv 
 # -- Compiling module fsmLight
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 17:45:34 on Mar 22,2023, Elapsed time: 0:00:00
+# End time: 15:52:21 on Mar 29,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 17:45:34 on Mar 22,2023
+# Start time: 15:52:21 on Mar 29,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "fsmLight(fast)".
 # Loading sv_std.std
 # Loading work.stimulus(fast)
 # Loading work.fsmLight(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: fsmLight.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut File: fsm_tb.sv Line: 16
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
-# End time: 17:47:57 on Mar 22,2023, Elapsed time: 0:02:23
-# Errors: 0, Warnings: 0
+# End time: 15:52:50 on Mar 29,2023, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 1

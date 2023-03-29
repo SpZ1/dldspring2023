@@ -6,7 +6,7 @@ module fsmLight (clk, reset, a, b, c, y);
    input logic 	b;
    input logic 	c;
    
-   output logic y;
+   output logic [3:0] y;
 
    typedef enum 	logic [3:0] {S0, S1, S2, S3, S4, S5, S6, S7, S8, S9} statetype;
    statetype state, nextstate;
@@ -19,6 +19,7 @@ module fsmLight (clk, reset, a, b, c, y);
    // next state logic
    always_comb
      case (state)
+
        S0: begin
 	  y <= 4'b0000;	  
 	  if (c) nextstate <= S7;
